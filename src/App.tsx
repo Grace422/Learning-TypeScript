@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const ListView = () => {
   return (
-      <motion.div className="flex flex-col">
+      <motion.div className="flex flex-col" layout >
         {Array.from({ length: 10 }).map((_, index) => (
           <motion.div
             key={index}
@@ -53,8 +53,7 @@ const ListView = () => {
 
 const GridView = () => {
   return (
-    <motion.div>
-      <div className="grid grid-cols-3 gap-4">
+      <motion.div className="grid grid-cols-3 gap-4" layout >
         {Array.from({ length: 10 }).map((_, index) => (
           <motion.div
             key={index}
@@ -100,8 +99,7 @@ const GridView = () => {
             </motion.div>
           </motion.div>
         ))}
-      </div>
-    </motion.div>
+      </motion.div>
   );
 };
 
